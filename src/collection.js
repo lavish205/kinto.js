@@ -738,7 +738,6 @@ export default class Collection {
       }
 
       const payload = {lastModified: unquoted, changes: data};
-      // XXX would be better to directly pass the changes here
       return this.applyHook("incoming-changes", payload);
     })
     // Reflect these changes locally
